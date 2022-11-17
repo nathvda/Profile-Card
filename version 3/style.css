@@ -7,9 +7,8 @@
 
 body{
     background-color:var(--mainColor);
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display:grid;
+    place-items:center;
     height:100vh;
     width:100vw;
     margin:0;
@@ -35,13 +34,13 @@ article{
     position:relative;
     background-color:var(--secondaryColor);
     color: var(--thirdColor);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:space-around;
+    display:grid;
+    grid-template-areas: "icon" "pp" "titre1" "titre2" "para" "mail" "links";
+    grid-template-rows:repeat(6,fit-content) 260px;
+    place-items:center;
     position:relative;
     z-index:2;
-    padding-bottom:50px;
+    padding-bottom:70px;
     box-shadow:0px 0px 20px rgba(0,0,0,0.3);
 }
 
@@ -96,10 +95,12 @@ ul::after{
 }
 
 article > i{
-    align-self:flex-start;
     margin:1.5em 1.5em;
     font-size:20px;
+    grid-area:icon;
+    justify-self:start;
 }
+
 
 img{ 
 width:200px;
@@ -111,6 +112,7 @@ border:3px solid var(--fourthColor);
 .bord{
     position:relative;
     height:230px;
+    grid-area:pp;
 }
 
 .bord::after{
@@ -137,6 +139,7 @@ h1{
     font-size:30px;
     letter-spacing:-1px;
     height:40px;
+    grid-area:titre1;
 }
 
 h2{
@@ -144,6 +147,7 @@ h2{
     letter-spacing:-1px;
     height:30px;
     color:var(--fourthColor);
+    grid-area:titre2;
 
 }
 
@@ -152,6 +156,7 @@ p{
     padding:1em 3em;
     height:fit-content;
     text-align:center;
+    grid-area:para;
 }
 
 a[href*="mail:"]{
@@ -162,21 +167,23 @@ a[href*="mail:"]{
     width:250px;
     text-align:center;
     text-decoration:none;
+    grid-area:mail;
+    height:1em;
 }
 
 ul{
     list-style-type:none;
-    display:flex;
-    width:80%;
-    justify-content:space-evenly;
-    padding:0;
+    grid-area:links;
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
     margin:0;
-    align-self:center;
+    padding:20px 0;
     align-items:center;
-    height:100px;
-    }
+
+ }
     
 ul li a{
     color:var(--fourthColor);
     font-size: 25px;
+    padding:20px;
 }

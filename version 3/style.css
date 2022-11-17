@@ -147,10 +147,11 @@ h2{
 
 }
 
-p{margin:0;
-padding:1em 3em;
-height:fit-content;
-text-align:center;
+p{
+    margin:0;
+    padding:1em 3em;
+    height:fit-content;
+    text-align:center;
 }
 
 a[href*="mail:"]{

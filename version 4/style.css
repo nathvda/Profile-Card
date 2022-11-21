@@ -1,0 +1,135 @@
+:root{
+    --accent: rgb(235, 103, 15);
+}
+
+body, li, ol, ul, html, dd, dt, dl, h1, h2, h3{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+
+body{
+    display:grid;
+    grid-template-columns: 260px 520px 520px auto;
+    padding:3rem;
+    box-sizing:border-box;
+    overflow:hidden;
+    background-image:linear-gradient(to right, var(--accent) 500px, white 200px);
+    font-family:lato;
+    font-size:14px;
+}
+
+
+img{
+    width:500px;
+    height:800px;
+    object-fit:cover;
+    box-shadow: 20px 20px 50px #7472726c;
+}
+
+.contacts{
+    display:flex;
+    justify-content:space-between;
+    flex-direction:column;
+    color:white;
+}
+
+dl{
+    line-height:1.5;
+}
+.contacts dt{
+    font-weight:bolder;
+    text-transform:capitalize;
+    font-size:1.4em;
+    letter-spacing:2px;
+}
+
+.contacts dd{
+    font-size:1.2em;
+}
+
+.contacts ul{
+    display:flex;
+    width:80%;
+    justify-content:space-between;
+}
+
+.contacts a{
+    color:white;
+    font-size:1.8em;}
+
+.contacts > i {
+    font-size:3em;
+}
+
+.introd{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:4em;
+}
+
+.introd h1{
+    font-size:3rem;
+    text-transform:uppercase;
+}
+h1 strong{
+    display:block;
+    color:var(--accent);
+}
+
+h2{
+    color: #202020;
+    margin-top:1em;
+    font-size:1.1em;
+}
+
+.introd p{
+    font-size:1em;
+    font-weight:light;
+    line-height:1.1;
+    letter-spacing:1px;
+}
+
+.introd ul{
+    display:flex;
+    justify-content:space-between;
+    height:4em;
+    align-items:center;
+}
+
+.introd li{
+    line-height:1;
+    padding:1rem;
+    min-width:12em;
+    text-align:center;
+    border-radius:3rem;
+    background-color:var(--accent);
+}
+
+.introd li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bolder;
+}
+
+.introd li:nth-of-type(2){
+    background-color:white;
+    border:3px solid #202020;
+    box-sizing:border-box;
+}
+
+.introd li:nth-of-type(2) a{
+   color:#202020;
+}
+
+nav{
+    justify-self:flex-end;
+    font-size:2em;
+}
+
+nav a{ 
+       color:#202020;
+    }
+
+
